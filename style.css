@@ -1,24 +1,23 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     text-align: center;
-    background-color: #f0f8ff;
 }
 
 .game-container {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
-#coin {
-    font-size: 50px;
-    padding: 20px;
-    background-color: #ffcc00;
-    border: none;
-    border-radius: 50%;
+#lion {
+    width: 150px;
+    height: 150px;
     cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 50%; /* Optional: Circular look for the lion */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#score {
-    font-size: 24px;
+#coinCount {
+    font-size: 30px;
+    font-weight: bold;
     color: #333;
 }
