@@ -3,16 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tap Tap Coin Game</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSS link -->
+    <title>Advanced Lion Coin Mining Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="game-container">
-        <h1>Tap the Coin!</h1>
-        <button id="coin" onclick="tapCoin()">🦁</button> <!-- Button for tapping -->
-        <p>Score: <span id="score">0</span></p> <!-- Score display -->
+        <h1>Lion Coin Mining Game</h1>
+        
+        <!-- Section 1: Mine -->
+        <section id="mine">
+            <h2>Mine</h2>
+            <img id="lion" src="lion.png" alt="Lion" onclick="mineCoins()"> <!-- Tap to collect coins -->
+            <p>Coins: <span id="coinCount">0</span></p>
+        </section>
+        
+        <!-- Section 2: Profit per Hour -->
+        <section id="profit-per-hour">
+            <h2>Profit per Hour</h2>
+            <p>Current Profit: <span id="profitPerHour">0</span> coins/hour</p>
+        </section>
+        
+        <!-- Section 3: Earn More Coins -->
+        <section id="earn-more-coins">
+            <h2>Earn More Coins</h2>
+            <button onclick="upgrade()">Upgrade Tap Power</button>
+            <button onclick="buyAutoMiner()">Buy Auto Miner</button>
+            <p>Each tap earns <span id="tapPower">1</span> coin(s).</p>
+            <p>Auto-miners: <span id="autoMiners">0</span> (earn 10 coins per minute)</p>
+        </section>
+        
+        <!-- Section 4: Airdrop -->
+        <section id="airdrop">
+            <h2>Airdrop</h2>
+            <button onclick="connectWallet()">Connect Wallet</button>
+            <p id="walletStatus">Wallet not connected.</p>
+        </section>
+
+        <!-- Section 5: Leaderboard -->
+        <section id="leaderboard">
+            <h2>Leaderboard</h2>
+            <p>Highest Score: <span id="highScore">0</span> coins</p>
+        </section>
     </div>
 
-    <script src="script.js"></script> <!-- JavaScript link -->
+    <script src="script.js"></script> <!-- Link to JavaScript -->
 </body>
 </html>
