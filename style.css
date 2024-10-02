@@ -5,19 +5,43 @@ body {
 }
 
 .game-container {
-    margin-top: 50px;
+    margin-top: 20px;
+}
+
+section {
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid #333;
+    width: 300px;
+    border-radius: 8px;
 }
 
 #lion {
     width: 150px;
     height: 150px;
     cursor: pointer;
-    border-radius: 50%; /* Optional: Circular look for the lion */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    transition: transform 0.1s ease;
 }
 
-#coinCount {
-    font-size: 30px;
-    font-weight: bold;
-    color: #333;
+#lion:active {
+    transform: scale(0.9); /* Shrinks slightly when tapped */
+}
+
+h2 {
+    color: #555;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #218838;
 }
