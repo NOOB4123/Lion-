@@ -45,3 +45,25 @@ button {
 button:hover {
     background-color: #218838;
 }
+/* Keep your existing CSS rules here */
+
+/* Add new customization section styling */
+#customize-game {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #333;
+    width: 300px;
+    border-radius: 8px;
+}
+
+#customize-game label {
+    font-weight: bold;
+}
+
+#customize-game input {
+    margin-bottom: 10px;
+}
+
+#customize-game button {
+    margin-top: 10px;
+}
