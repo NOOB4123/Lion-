@@ -49,3 +49,22 @@
     <script src="script.js"></script> <!-- Link to JavaScript -->
 </body>
 </html>
+<!-- Keep your existing HTML structure here -->
+
+<!-- Section 6: Customize Game -->
+<section id="customize-game">
+    <h2>Customize Your Game</h2>
+    <label for="bgColor">Background Color: </label>
+    <input type="color" id="bgColor" value="#f4f4f4" onchange="changeBackgroundColor()">
+    <br><br>
+
+    <label for="btnColor">Button Color: </label>
+    <input type="color" id="btnColor" value="#28a745" onchange="changeButtonColor()">
+    <br><br>
+
+    <label for="lionImage">Change Lion Image: </label>
+    <input type="file" id="lionImage" accept="image/*" onchange="changeLionImage()">
+    <br><br>
+
+    <button onclick="resetCustomization()">Reset to Default</button>
+</section>
