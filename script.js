@@ -78,3 +78,67 @@ function connectWallet() {
     document.getElementById('walletStatus').textContent = "Wallet connected!";
     alert("Wallet connected (simulated)!");
 }
+// Your existing JavaScript code remains here
+
+// Add the new customization functions
+
+// Change background color
+function changeBackgroundColor() {
+    const bgColor = document.getElementById('bgColor').value;
+    document.body.style.backgroundColor = bgColor;
+    localStorage.setItem('bgColor', bgColor);  // Save the choice in localStorage
+}
+
+// Change button colors
+function changeButtonColor() {
+    const btnColor = document.getElementById('btnColor').value;
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.style.backgroundColor = btnColor;
+    });
+    localStorage.setItem('btnColor', btnColor);  // Save the choice in localStorage
+}
+
+// Change the lion image
+function changeLionImage() {
+    const file = document.getElementById('lionImage').files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            document.getElementById('lion').src = event.target.result;
+            localStorage.setItem('lionImage', event.target.result);  // Save the choice in localStorage
+        };
+        reader.readAsDataURL(file);  // Read the image file as a data URL
+    }
+}
+
+// Reset customization to default values
+function resetCustomization() {
+    localStorage.removeItem('bgColor');
+    localStorage.removeItem('btnColor');
+    localStorage.removeItem('lionImage');
+    location.reload();  // Reload the page to reset the styles
+}
+
+// Apply saved customization on load
+window.onload = function() {
+    // Apply saved background color
+    if (localStorage.getItem('bgColor')) {
+        document.body.style.backgroundColor = localStorage.getItem('bgColor');
+        document.getElementById('bgColor').value = localStorage.getItem('bgColor');
+    }
+    
+    // Apply saved button color
+    if (localStorage.getItem('btnColor')) {
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.style.backgroundColor = localStorage.getItem('btnColor');
+        });
+        document.getElementById('btnColor').value = localStorage.getItem('btnColor');
+    }
+    
+    // Apply saved lion image
+    if (localStorage.getItem('lionImage')) {
+        document.getElementById('lion').src = localStorage.getItem('lionImage');
+    }
+};
