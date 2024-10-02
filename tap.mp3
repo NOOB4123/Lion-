@@ -1,0 +1,10 @@
+// Add sound when tapping
+const tapSound = new Audio('tap.mp3');
+
+function mineCoins() {
+    tapSound.play(); // Play sound
+    coins += tapPower;
+    updateCoinsDisplay();
+    checkHighScore();
+    localStorage.setItem('coins', coins);
+}
